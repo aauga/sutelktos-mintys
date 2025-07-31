@@ -32,20 +32,20 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2rem;
     animation: slideLeft 60s linear infinite;
     width: max-content;
+    padding: 0 2rem;
 }
 
 /* Individual slide */
 #hero-slideshow img {
     height: 480px;
-    width: 640px;
     object-fit: cover;
     flex-shrink: 0;
     border-radius: 2rem;
+    aspect-ratio: 4/3;
 }
 
 #hero-slideshow img.square {
-    width: 480px;
-    height: 480px;
+    aspect-ratio: 1/1;
 }
 
 @keyframes slideLeft {
@@ -53,6 +53,24 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-50% - 1rem));
+        transform: translateX(calc(-50% + 1rem));
+    }
+}
+
+@media (max-width: 768px) {
+    #hero-slideshow img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 568px) {
+    #hero-slideshow img {
+        height: 385px;
+    }
+}
+
+@media (max-width: 320px) {
+    #hero-slideshow img {
+        height: 320px;
     }
 }
