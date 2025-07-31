@@ -25,3 +25,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
 }
+
+#hero-slideshow img {
+    height: 480px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#hero-slideshow .square {
+    width: 480px;
+    height: 480px;
+}
