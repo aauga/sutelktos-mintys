@@ -2,6 +2,8 @@
     --background-color: #F7F9F2;
 }
 
+/* Fonts */
+
 @font-face {
     font-family: 'Roboto Slab';
     src: url('../fonts/RobotoSlab-Regular.woff2') format('woff2');
@@ -18,16 +20,33 @@
     font-display: swap;
 }
 
+/* Global styles */
+
 body {
     background-color: var(--background-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
+    font-weight: 700;
 }
 
-/* Hero section slideshow */
-#hero-slideshow {
+/* Hero section */
+
+#hero #text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 56rem;
+    min-height: 60vh;
+}
+
+/* Hero section: Slideshow */
+
+#hero #slideshow {
     display: flex;
     gap: 2rem;
     animation: slideLeft 60s linear infinite;
@@ -35,8 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 2rem;
 }
 
-/* Individual slide */
-#hero-slideshow img {
+#hero #slideshow img {
     height: 480px;
     object-fit: cover;
     flex-shrink: 0;
@@ -44,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
     aspect-ratio: 4/3;
 }
 
-#hero-slideshow img.square {
+#hero #slideshow img.square {
     aspect-ratio: 1/1;
 }
 
@@ -57,20 +75,22 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Media queries */
+
 @media (max-width: 768px) {
-    #hero-slideshow img {
+    #hero #slideshow img {
         height: 400px;
     }
 }
 
 @media (max-width: 568px) {
-    #hero-slideshow img {
+    #hero #slideshow img {
         height: 385px;
     }
 }
 
 @media (max-width: 320px) {
-    #hero-slideshow img {
+    #hero #slideshow img {
         height: 320px;
     }
 }
