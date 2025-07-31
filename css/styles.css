@@ -26,6 +26,15 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
 }
 
+/* Hero section slideshow */
+#hero-slideshow {
+    display: flex;
+    gap: 2rem;
+    animation: slideLeft 60s linear infinite;
+    width: max-content;
+}
+
+/* Individual slide */
 #hero-slideshow img {
     height: 480px;
     width: 640px;
@@ -34,7 +43,16 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 2rem;
 }
 
-#hero-slideshow .square {
+#hero-slideshow img.square {
     width: 480px;
     height: 480px;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 1rem));
+    }
 }
