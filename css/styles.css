@@ -1,4 +1,7 @@
 :root {
+    --primary-color: #012924;
+    --accent-color: #ff9da0;
+    --button-secondary-color: #cecece;
     --background-color: #F7F9F2;
 }
 
@@ -8,6 +11,14 @@
     font-family: 'Roboto Slab';
     src: url('../fonts/RobotoSlab-Regular.woff2') format('woff2');
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Semibold.woff2') format('woff2');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -29,6 +40,41 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
+    color: var(--primary-color);
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: color-mix(in srgb, var(--accent-color) 90%, var(--primary-color));
+}
+
+button:active {
+    background-color: color-mix(in srgb, var(--accent-color) 70%, var(--primary-color));
+}
+
+button.secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--button-secondary-color);
+}
+
+button.secondary:hover {
+    background-color: color-mix(in srgb, var(--button-secondary-color) 30%, white);
+}
+
+button.secondary:active {
+    background-color: color-mix(in srgb, var(--button-secondary-color) 50%, white);
 }
 
 /* Hero section */
@@ -42,6 +88,22 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     max-width: 56rem;
     min-height: 60vh;
+}
+
+#hero h1 {
+    font-size: 3.75rem;
+    line-height: 1.2;
+}
+
+#hero p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: color-mix(in srgb, var(--primary-color) 70%, white);
+}
+
+#hero #cta {
+    display: flex;
+    gap: 1rem;
 }
 
 /* Hero section: Slideshow */
