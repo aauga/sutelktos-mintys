@@ -1,3 +1,4 @@
+@use 'variables' as *;
 
 .hero-text {
     display: flex;
@@ -18,7 +19,7 @@
 .hero p {
     font-size: 1.25rem;
     line-height: 1.5;
-    color: color-mix(in srgb, var(--primary-color) 70%, white);
+    color: color-mix(in srgb, $primary-color 70%, white);
 }
 
 .hero-cta {
