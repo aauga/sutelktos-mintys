@@ -1,0 +1,33 @@
+button {
+    font-size: $font-size-md;
+    font-weight: 600;
+    border-radius: $border-radius-md;
+    padding: $spacing-sm $spacing-md;
+    background-color: $accent-color;
+    color: $primary-color;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: color-mix(in srgb, $accent-color 90%, $primary-color);
+    }
+
+    &:active {
+        background-color: color-mix(in srgb, $accent-color 70%, $primary-color);
+    }
+
+    &.secondary {
+        background-color: transparent;
+        color: $primary-color;
+        border: 1px solid $button-secondary-color;
+
+        &:hover {
+            background-color: color-mix(in srgb, $button-secondary-color 30%, white);
+        }
+
+        &:active {
+            background-color: color-mix(in srgb, $button-secondary-color 50%, white);
+        }
+    }
+}

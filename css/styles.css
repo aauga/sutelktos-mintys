@@ -15,40 +15,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
 }
 
-button {
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: color-mix(in srgb, var(--accent-color) 90%, var(--primary-color));
-}
-
-button:active {
-    background-color: color-mix(in srgb, var(--accent-color) 70%, var(--primary-color));
-}
-
-button.secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--button-secondary-color);
-}
-
-button.secondary:hover {
-    background-color: color-mix(in srgb, var(--button-secondary-color) 30%, white);
-}
-
-button.secondary:active {
-    background-color: color-mix(in srgb, var(--button-secondary-color) 50%, white);
-}
-
 /* Hero section */
 
 .hero-text {
