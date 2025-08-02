@@ -2,23 +2,28 @@
 
 button {
     cursor: pointer;
-    padding: $spacing-sm $spacing-md;
-    background-color: $accent-color;
+    border: none;
+}
+
+.button {
     transition: background-color 0.3s ease;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-md;
 
     font-size: $font-size-md;
     font-weight: 600;
-    color: $primary-color;
 
-    border: none;
-    border-radius: $border-radius-md;
+    &.primary {
+        background-color: $accent-color;
+        color: $primary-color;
 
-    &:hover {
-        background-color: color-mix(in srgb, $accent-color 90%, $primary-color);
-    }
+        &:hover {
+            background-color: color-mix(in srgb, $accent-color 90%, $primary-color);
+        }
 
-    &:active {
-        background-color: color-mix(in srgb, $accent-color 70%, $primary-color);
+        &:active {
+            background-color: color-mix(in srgb, $accent-color 70%, $primary-color);
+        }
     }
 
     &.secondary {

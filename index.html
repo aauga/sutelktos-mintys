@@ -17,62 +17,52 @@
     <!-- Navbar -->
     <header>
         <nav>
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div class="relative flex h-25 items-center justify-between">
+            <div class="container">
+                <div class="nav-content">
                     <!-- Mobile menu button-->
-                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <button type="button" id="mobile-menu-button"
-                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:ring-2 focus:ring-gray-200 focus:outline-hidden focus:ring-inset">
-                            <span class="absolute -inset-0.5"></span>
+                    <div class="mobile-menu-button">
+                        <button type="button" id="mobile-menu-button">
                             <span class="sr-only">Atverti meniu</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                                data-slot="icon" aria-hidden="true" class="menu-icon">
                                 <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                                data-slot="icon" aria-hidden="true" class="close-icon">
                                 <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
                     </div>
 
                     <!-- Logo -->
-                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                        <div class="flex shrink-0 items-center">
+                    <div class="logo-section">
+                        <div class="logo">
                             <a href="/">
-                                <img src="images/logo.svg" alt="Sutelktos mintys" class="h-20 w-auto" />
+                                <img src="images/logo.svg" alt="Sutelktos mintys" />
                             </a>
                         </div>
                     </div>
 
                     <!-- Navigation -->
-                    <div class="hidden sm:flex sm:items-center">
-                        <div class="flex space-x-4">
-                            <a href="#"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200 active:text-gray-900">Paslaugos</a>
-                            <a href="#"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200 active:text-gray-900">Mokytojos</a>
-                            <a href="#"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200 active:text-gray-900">Kainos</a>
-                            <a href="#"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200 active:text-gray-900">Kontaktai</a>
+                    <div class="desktop-nav">
+                        <div class="nav-links">
+                            <a href="#">Paslaugos</a>
+                            <a href="#">Mokytojos</a>
+                            <a href="#">Kainos</a>
+                            <a href="#">Kontaktai</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden sm:hidden">
-                <div class="space-y-1 px-2 pt-2 pb-3">
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200 active:text-gray-900">Paslaugos</a>
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200 active:text-gray-900">Mokytojos</a>
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200 active:text-gray-900">Kainos</a>
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 active:bg-gray-200 active:text-gray-900">Kontaktai</a>
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <div class="mobile-nav-links">
+                    <a href="#">Paslaugos</a>
+                    <a href="#">Mokytojos</a>
+                    <a href="#">Kainos</a>
+                    <a href="#">Kontaktai</a>
                 </div>
             </div>
         </nav>
@@ -80,7 +70,7 @@
 
     <!-- Hero section-->
     <section class="hero">
-        <div class="hero-text container mx-auto">
+        <div class="hero-text container">
             <h1>
                 Padedame vaikams augti susikaupusiems, smalsiems ir pasitikintiems savimi
             </h1>
@@ -89,8 +79,8 @@
                 susikaupimas lavinami per žaidimus, judesį ir emocinio intelekto ugdymą
             </p>
             <div class="hero-cta">
-                <button type="button">Registruotis</button>
-                <button type="button" class="secondary">Sužinoti daugiau</button>
+                <button type="button" class="button primary">Registruotis</button>
+                <button type="button" class="button secondary">Sužinoti daugiau</button>
             </div>
         </div>
 
