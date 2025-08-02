@@ -2,28 +2,26 @@
 @use 'animations' as *;
 @use 'mixins' as *;
 
-.hero {
-    h1 {
-        font-size: 3.75rem;
-        line-height: 1.2;
-        @include fade-in-up($delay-sm);
-    }
-
-    p {
-        font-size: 1.25rem;
-        line-height: 1.5;
-        color: color-mix(in srgb, $primary-color 70%, white);
-        @include fade-in-up($delay-md);
-    }
-}
-
 .hero-text {
     @include flex-column;
     @include flex-center;
     @include gap($spacing-lg);
     text-align: center;
-    max-width: 56rem;
-    min-height: 60vh;
+    max-width: 60rem;
+    padding: 8rem 2rem;
+
+    h1 {
+        line-height: 1.2;
+        font-size: 2.25rem;
+        @include fade-in-up($delay-sm);
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: 1rem;
+        color: color-mix(in srgb, $primary-color 70%, white);
+        @include fade-in-up($delay-md);
+    }
 }
 
 .hero-cta {
@@ -63,24 +61,64 @@
 /* Media queries */
 
 @media (min-width: $breakpoint-sm) {
+    .hero-text {
+        h1 {
+            font-size: 2.75rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+        }
+    }
+
     .hero-slideshow img {
         height: 360px;
     }
 }
 
 @media (min-width: $breakpoint-md) {
+    .hero-text {
+        h1 {
+            font-size: 3.25rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+    }
+
     .hero-slideshow img {
         height: 400px;
     }
 }
 
 @media (min-width: $breakpoint-lg) {
+    .hero-text {
+        h1 {
+            font-size: 3.75rem;
+        }
+
+        p {
+            font-size: 1.375rem;
+        }
+    }
+
     .hero-slideshow img {
         height: 440px;
     }
 }
 
 @media (min-width: $breakpoint-xl) {
+    .hero-text {
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1.375rem;
+        }
+    }
+
     .hero-slideshow img {
         height: 480px;
     }
