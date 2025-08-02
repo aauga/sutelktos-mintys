@@ -148,9 +148,9 @@ button.secondary:active {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.delay-1 { animation-delay: 0.1s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-5 { animation-delay: 0.5s; }
+.delay-sm { animation-delay: 0.1s; }
+.delay-md { animation-delay: 0.3s; }
+.delay-lg { animation-delay: 0.5s; }
 
 /* Keyframes */
 
