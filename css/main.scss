@@ -3,3 +3,32 @@
 @use 'mixins';
 @use 'animations';
 @use 'buttons';
+@use 'hero';
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: $background-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: $primary-color;
+}
+
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    button {
+        border: 1px solid black !important;
+    }
+}
