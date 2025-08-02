@@ -19,24 +19,6 @@
   font-style: normal;
   font-display: swap;
 }
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.delay-sm {
-  animation-delay: 0.1s;
-}
-
-.delay-md {
-  animation-delay: 0.3s;
-}
-
-.delay-lg {
-  animation-delay: 0.5s;
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -98,17 +80,26 @@ button.secondary:active {
 .hero h1 {
   font-size: 3.75rem;
   line-height: 1.2;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.1s forwards;
 }
 
 .hero p {
   font-size: 1.25rem;
   line-height: 1.5;
   color: color-mix(in srgb, #012924 70%, white);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
 }
 
 .hero-cta {
   display: flex;
   gap: 1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.5s forwards;
 }
 
 /* Hero section: Slideshow */

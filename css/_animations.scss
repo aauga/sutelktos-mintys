@@ -1,12 +1,8 @@
-.fade-in-up {
+@mixin fade-in-up($delay: 0s, $duration: 0.8s) {
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp $duration ease-out $delay forwards;
 }
-
-.delay-sm { animation-delay: 0.1s; }
-.delay-md { animation-delay: 0.3s; }
-.delay-lg { animation-delay: 0.5s; }
 
 // Keyframes
 

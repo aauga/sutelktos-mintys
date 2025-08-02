@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'animations' as *;
 
 .hero-text {
     display: flex;
@@ -14,17 +15,20 @@
 .hero h1 {
     font-size: 3.75rem;
     line-height: 1.2;
+    @include fade-in-up($delay-sm);
 }
 
 .hero p {
     font-size: 1.25rem;
     line-height: 1.5;
     color: color-mix(in srgb, $primary-color 70%, white);
+    @include fade-in-up($delay-md);
 }
 
 .hero-cta {
     display: flex;
     gap: 1rem;
+    @include fade-in-up($delay-lg);
 }
 
 /* Hero section: Slideshow */
