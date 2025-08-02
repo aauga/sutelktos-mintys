@@ -8,5 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const isHidden = mobileMenu.classList.toggle('hidden');
             mobileMenuButton.parentElement.classList.toggle('menu-open', !isHidden);
         });
+        
+        // Handle window resize to hide mobile menu on larger screens
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) { // md breakpoint
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.parentElement.classList.remove('menu-open');
+            }
+        });
     }
 });
