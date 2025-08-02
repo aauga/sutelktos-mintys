@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 button {
     font-size: $font-size-md;
     font-weight: 600;
