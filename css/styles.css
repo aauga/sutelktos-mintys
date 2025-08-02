@@ -34,8 +34,15 @@
 
 /* Global styles */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -164,6 +171,25 @@ button.secondary:active {
     }
     100% {
         transform: translateX(calc(-50% + 1rem));
+    }
+}
+
+/* Print styles */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    #hero #slideshow {
+        display: none;
+    }
+    
+    button {
+        border: 1px solid black !important;
     }
 }
 
