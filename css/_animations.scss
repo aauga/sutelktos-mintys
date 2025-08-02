@@ -4,6 +4,10 @@
     animation: fadeInUp $duration ease-out $delay forwards;
 }
 
+@mixin slide-left($duration: 60s, $delay: 0s) {
+    animation: slideLeft $duration ease-out $delay forwards;
+}
+
 // Keyframes
 
 @keyframes fadeInUp {
