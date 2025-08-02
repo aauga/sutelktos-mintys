@@ -1,15 +1,17 @@
 @use 'variables' as *;
 
 button {
-    font-size: $font-size-md;
-    font-weight: 600;
-    border-radius: $border-radius-md;
+    cursor: pointer;
     padding: $spacing-sm $spacing-md;
     background-color: $accent-color;
-    color: $primary-color;
-    border: none;
-    cursor: pointer;
     transition: background-color 0.3s ease;
+
+    font-size: $font-size-md;
+    font-weight: 600;
+    color: $primary-color;
+
+    border: none;
+    border-radius: $border-radius-md;
 
     &:hover {
         background-color: color-mix(in srgb, $accent-color 90%, $primary-color);
