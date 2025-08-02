@@ -10,17 +10,17 @@
     padding-left: $spacing-sm;
     padding-right: $spacing-sm;
 
-    @media (max-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-md) {
         padding-left: $spacing-md;
         padding-right: $spacing-md;
     }
 
-    @media (max-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-lg) {
         padding-left: $spacing-lg;
         padding-right: $spacing-lg;
     }
 
-    @media (max-width: $breakpoint-xl) {
+    @media (min-width: $breakpoint-xl) {
         padding-left: $spacing-xl;
         padding-right: $spacing-xl;
     }
