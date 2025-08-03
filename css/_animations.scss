@@ -8,6 +8,10 @@
     animation: slideLeft $duration linear infinite;
 }
 
+@mixin slide-down($duration: 0.3s) {
+    animation: slideDown $duration ease-out;
+}
+
 // Keyframes
 
 @keyframes fadeInUp {
@@ -27,5 +31,16 @@
     }
     100% {
         transform: translateX(calc(-50% + 1rem));
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
