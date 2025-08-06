@@ -25,3 +25,13 @@
         padding-right: $spacing-xl;
     }
 }
+
+section {
+    &.margin-top {
+        margin-top: $spacing-xl;
+    }
+
+    &.margin-bottom {
+        margin-bottom: $spacing-xl;
+    }
+}

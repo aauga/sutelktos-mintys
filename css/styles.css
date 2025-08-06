@@ -46,6 +46,13 @@
   }
 }
 
+section.margin-top {
+  margin-top: 4rem;
+}
+section.margin-bottom {
+  margin-bottom: 4rem;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -383,6 +390,140 @@ nav {
   }
   .hero-slideshow img {
     height: 480px;
+  }
+}
+:root {
+  --pastel-blue: #BBD8EC;
+  --pastel-green: #D6E5BE;
+  --pastel-yellow: #FAE1A7;
+  --pastel-red: #FFCBE1;
+}
+
+.offerings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.offerings .heading {
+  text-align: center;
+  max-width: 60rem;
+  margin-bottom: 2rem;
+}
+.offerings .heading h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.offerings .heading p {
+  font-size: 1rem;
+  color: color-mix(in srgb, black 50%, white);
+}
+.offerings .grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.offering {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.offering .icon {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offering.first {
+  background-color: color-mix(in srgb, var(--pastel-blue) 60%, white);
+}
+.offering.first p {
+  color: color-mix(in srgb, var(--pastel-blue) 50%, black);
+}
+.offering.first .icon {
+  background-color: var(--pastel-blue);
+}
+.offering.second {
+  background-color: color-mix(in srgb, var(--pastel-green) 60%, white);
+}
+.offering.second p {
+  color: color-mix(in srgb, var(--pastel-green) 50%, black);
+}
+.offering.second .icon {
+  background-color: var(--pastel-green);
+}
+.offering.third {
+  order: 4;
+  background-color: color-mix(in srgb, var(--pastel-yellow) 60%, white);
+}
+.offering.third p {
+  color: color-mix(in srgb, var(--pastel-yellow) 50%, black);
+}
+.offering.third .icon {
+  background-color: var(--pastel-yellow);
+}
+.offering.fourth {
+  background-color: color-mix(in srgb, var(--pastel-red) 60%, white);
+}
+.offering.fourth p {
+  color: color-mix(in srgb, var(--pastel-red) 50%, black);
+}
+.offering.fourth .icon {
+  background-color: var(--pastel-red);
+}
+.offering h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.offering p {
+  text-align: justify;
+  font-size: 1rem;
+}
+.offering button {
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .offerings .heading {
+    margin-bottom: 4rem;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .first {
+    grid-column: 1/2;
+  }
+  .second {
+    grid-column: 2/3;
+  }
+  .third {
+    grid-column: 1/2;
+  }
+  .fourth {
+    order: 4;
+    grid-column: 2/3;
+  }
+}
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .first {
+    grid-column: 1/3;
+  }
+  .second {
+    grid-column: 3/6;
+  }
+  .third {
+    grid-column: 1/4;
+  }
+  .fourth {
+    grid-column: 4/6;
   }
 }
 html {
