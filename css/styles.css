@@ -585,6 +585,13 @@ nav {
   flex-direction: column;
   gap: 0.5rem;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.teachers .heading.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 .teachers h2 {
   font-size: 2rem;
@@ -613,6 +620,13 @@ nav {
   border-radius: 2rem;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.teachers img.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (min-width: 768px) {

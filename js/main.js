@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     delay = (index + 1) * 200; // 200ms delay between each offering
                 } else if (entry.target.classList.contains('icon')) {
                     delay = 800; // Icons animate after their parent offering
+                } else if (entry.target.closest('.teachers') && entry.target.tagName === 'IMG') {
+                    delay = 300; // Image animates 300ms after the heading
                 }
                 
                 setTimeout(() => {
@@ -51,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements that should animate on scroll
-    const animatedElements = document.querySelectorAll('.offerings .heading, .offering, .offering .icon');
+    const animatedElements = document.querySelectorAll('.offerings .heading, .offering, .offering .icon, .teachers .heading, .teachers img');
     animatedElements.forEach(el => {
         observer.observe(el);
     });

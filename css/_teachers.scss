@@ -14,6 +14,15 @@ $pastel-brown: #836953;
         @include flex-column;
         gap: $spacing-sm;
         text-align: center;
+
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+
+        &.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     h2 {
@@ -47,6 +56,15 @@ $pastel-brown: #836953;
         max-height: 26rem;
         border-radius: $border-radius-xl;
         object-fit: cover;
+        
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+
+        &.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 
