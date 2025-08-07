@@ -2,13 +2,6 @@
 @use 'mixins' as *;
 @use 'animations' as *;
 
-:root {
-    --pastel-blue: #BBD8EC;
-    --pastel-green: #D6E5BE;
-    --pastel-yellow: #FAE1A7;
-    --pastel-red: #FFCBE1;
-}
-
 .offerings {
     @include flex-center;
     @include flex-column;
@@ -74,51 +67,51 @@
     }
 
     &.first {
-        background-color: color-mix(in srgb, var(--pastel-blue) 60%, white);
+        background-color: color-mix(in srgb, $pastel-blue 60%, white);
 
         p {
-            color: color-mix(in srgb, var(--pastel-blue) 50%, black);
+            color: color-mix(in srgb, $pastel-blue 50%, black);
         }
 
         .icon {
-            background-color: var(--pastel-blue);
+            background-color: $pastel-blue;
         }
     }
 
     &.second {
-        background-color: color-mix(in srgb, var(--pastel-green) 60%, white);
+        background-color: color-mix(in srgb, $pastel-green 60%, white);
 
         p {
-            color: color-mix(in srgb, var(--pastel-green) 50%, black);
+            color: color-mix(in srgb, $pastel-green 50%, black);
         }
 
         .icon {
-            background-color: var(--pastel-green);
+            background-color: $pastel-green;
         }
     }
 
     &.third {
         order: 4;
-        background-color: color-mix(in srgb, var(--pastel-yellow) 60%, white);
+        background-color: color-mix(in srgb, $pastel-yellow 60%, white);
 
         p {
-            color: color-mix(in srgb, var(--pastel-yellow) 50%, black);
+            color: color-mix(in srgb, $pastel-yellow 50%, black);
         }
 
         .icon {
-            background-color: var(--pastel-yellow);
+            background-color: $pastel-yellow;
         }
     }
 
     &.fourth {
-        background-color: color-mix(in srgb, var(--pastel-red) 60%, white);
+        background-color: color-mix(in srgb, $pastel-red 60%, white);
 
         p {
-            color: color-mix(in srgb, var(--pastel-red) 50%, black);
+            color: color-mix(in srgb, $pastel-red 50%, black);
         }
 
         .icon {
-            background-color: var(--pastel-red);
+            background-color: $pastel-red;
         }
     }
 
