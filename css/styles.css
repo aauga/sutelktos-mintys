@@ -668,6 +668,7 @@ nav {
 .pricing-grid {
   display: grid;
   gap: 1rem;
+  width: 100%;
 }
 
 .pricing-card {
@@ -748,6 +749,27 @@ nav {
   margin: 1rem 0;
 }
 
+.lesson-includes {
+  width: 100%;
+}
+.lesson-includes .includes-grid {
+  display: grid;
+  gap: 1rem;
+}
+.lesson-includes h3 {
+  font-size: 1rem;
+  color: #012924;
+  margin-bottom: 1rem;
+}
+.lesson-includes h4 {
+  font-size: 0.875rem;
+  color: #808080;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 768px) {
   .pricing .heading {
     margin-bottom: 4rem;
@@ -755,6 +777,10 @@ nav {
 }
 @media (min-width: 992px) {
   .pricing-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  .lesson-includes .includes-grid {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }

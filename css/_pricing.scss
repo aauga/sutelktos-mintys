@@ -25,6 +25,7 @@
 .pricing-grid {
     display: grid;
     gap: $spacing-md;
+    width: 100%;
 }
 
 .pricing-card {
@@ -119,6 +120,30 @@
     margin: $spacing-md 0;
 }
 
+.lesson-includes {
+    width: 100%;
+
+    .includes-grid {
+        display: grid;
+        gap: $spacing-md;
+    }
+
+    h3 {
+        font-size: $font-size-md;
+        color: $primary-color;
+        margin-bottom: $spacing-md;
+    }
+
+    h4 {
+        font-size: $font-size-sm;
+        color: $gray-color;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: $spacing-md;
+    }
+}
+
 @media (min-width: $breakpoint-md) {
     .pricing {
         .heading {
@@ -131,5 +156,12 @@
     .pricing-grid {
         grid-template-columns: 1fr 1fr 1fr;
         gap: $spacing-lg;
+    }
+
+    .lesson-includes {
+        .includes-grid {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: $spacing-lg;
+        }
     }
 }
