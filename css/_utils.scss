@@ -7,13 +7,8 @@
     margin-left: auto;
     margin-right: auto;
 
-    padding-left: $spacing-sm;
-    padding-right: $spacing-sm;
-
-    @media (min-width: $breakpoint-md) {
-        padding-left: $spacing-md;
-        padding-right: $spacing-md;
-    }
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
 
     @media (min-width: $breakpoint-lg) {
         padding-left: $spacing-lg;
