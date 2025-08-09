@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: "Roboto Slab";
-  src: url("../fonts/RobotoSlab-Semibold.woff2") format("woff2");
+  src: url("../fonts/RobotoSlab-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -972,8 +972,6 @@ footer .footer-content .footer-social .social-links a img:hover {
 }
 .privacy-policy h1 {
   font-size: 2rem;
-  font-weight: 700;
-  color: #012924;
 }
 
 html {
