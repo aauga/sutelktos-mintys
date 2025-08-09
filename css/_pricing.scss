@@ -34,6 +34,28 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+
+    &.best-offer {
+        border: 2px solid $accent-color;
+        transform: scale(1.02);
+    }
+
+    .best-offer-badge {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background: $accent-color;
+        padding: $spacing-xs $spacing-md;
+        border-radius: $border-radius-md;
+
+        font-size: $font-size-sm;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: white;
+    }
 
     h3 {
         font-size: $font-size-lg;

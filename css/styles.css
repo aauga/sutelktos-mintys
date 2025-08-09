@@ -677,6 +677,24 @@ nav {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+}
+.pricing-card.best-offer {
+  border: 2px solid #ff9da0;
+  transform: scale(1.02);
+}
+.pricing-card .best-offer-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff9da0;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
 }
 .pricing-card h3 {
   font-size: 1.5rem;
