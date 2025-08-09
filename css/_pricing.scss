@@ -1,0 +1,128 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.pricing {
+    @include flex-center;
+    @include flex-column;
+
+    .heading {
+        text-align: center;
+        max-width: 60rem;
+        margin-bottom: $spacing-lg;
+
+        h2 {
+            font-size: $font-size-xl;
+            margin-bottom: $spacing-sm;
+        }
+
+        p {
+            font-size: $font-size-md;
+            color: color-mix(in srgb, black 50%, white);
+        }
+    }
+}
+
+.pricing-grid {
+    display: grid;
+    gap: $spacing-md;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: $border-radius-lg;
+    padding: $spacing-lg;
+
+    h3 {
+        font-size: $font-size-lg;
+        font-weight: 600;
+    }
+
+    > p {
+        font-size: $font-size-sm;
+        margin-bottom: $spacing-lg;
+        line-height: 1.5;
+    }
+
+    .price-container {
+        .price {
+            font-size: $font-size-xxl;
+            font-weight: 700;
+            color: $primary-color;
+        }
+
+        span:last-child {
+            font-size: $font-size-md;
+            color: $primary-color;
+        }
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background: rgba($primary-color, 0.15);
+        margin: $spacing-md 0;
+    }
+
+    .includes-section {
+        margin-bottom: $spacing-lg;
+
+        .includes-label {
+            font-size: $font-size-sm;
+            color: #666;
+            margin-bottom: $spacing-md;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .includes-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+
+            li {
+                position: relative;
+                padding-left: $spacing-lg;
+                margin-bottom: $spacing-sm;
+                color: $primary-color;
+                font-size: $font-size-sm;
+                line-height: 1.4;
+
+                &::before {
+                    content: "✓";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: #4CAF50;
+                    font-weight: bold;
+                    font-size: $font-size-md;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .button {
+        width: 100%;
+        color: white;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .pricing {
+        .heading {
+            margin-bottom: $spacing-xl;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $spacing-lg;
+    }
+}

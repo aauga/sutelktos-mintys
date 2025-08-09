@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Roboto Slab";
   src: url("../fonts/RobotoSlab-Regular.woff2") format("woff2");
@@ -641,6 +642,114 @@ nav {
   .teachers img {
     height: 26rem;
     grid-column: 2/2;
+  }
+}
+.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.pricing .heading {
+  text-align: center;
+  max-width: 60rem;
+  margin-bottom: 2rem;
+}
+.pricing .heading h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.pricing .heading p {
+  font-size: 1rem;
+  color: color-mix(in srgb, black 50%, white);
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.pricing-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.pricing-card > p {
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.pricing-card .price-container .price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #012924;
+}
+.pricing-card .price-container span:last-child {
+  font-size: 1rem;
+  color: #012924;
+}
+.pricing-card hr {
+  border: none;
+  height: 1px;
+  background: rgba(1, 41, 36, 0.15);
+  margin: 1rem 0;
+}
+.pricing-card .includes-section {
+  margin-bottom: 2rem;
+}
+.pricing-card .includes-section .includes-label {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pricing-card .includes-section .includes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.pricing-card .includes-section .includes-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  color: #012924;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.pricing-card .includes-section .includes-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.pricing-card .includes-section .includes-list li:last-child {
+  margin-bottom: 0;
+}
+.pricing-card .button {
+  width: 100%;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .pricing .heading {
+    margin-bottom: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
   }
 }
 html {
