@@ -970,6 +970,12 @@ footer .footer-content .footer-social .social-links a img:hover {
     justify-content: flex-start;
   }
 }
+.privacy-policy h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #012924;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
