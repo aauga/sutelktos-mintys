@@ -853,6 +853,29 @@ nav {
     gap: 2rem;
   }
 }
+.contact div {
+  background-color: #012924;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.contact div h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.contact div p {
+  color: #F8FCD4;
+}
+.contact div button {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contact div {
+    padding: 4rem 2rem;
+  }
+}
 html {
   scroll-behavior: smooth;
   font-size: 16px;

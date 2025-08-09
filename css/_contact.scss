@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+.contact {
+    div {
+        background-color: $primary-color;
+        padding: $spacing-lg;
+        border-radius: $border-radius-lg;
+        text-align: center;
+
+        h2 {
+            color: white;
+            font-size: $font-size-xl;
+            margin-bottom: $spacing-sm;
+        }
+
+        p {
+            color: $tertiary-color;
+        }
+
+        button {
+            margin-top: $spacing-lg;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .contact {
+        div {
+            padding: $spacing-xl $spacing-lg;
+        }
+    }
+}
