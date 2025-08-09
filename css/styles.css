@@ -674,6 +674,9 @@ nav {
   background: white;
   border-radius: 1rem;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .pricing-card h3 {
   font-size: 1.5rem;
@@ -701,6 +704,7 @@ nav {
 }
 .pricing-card .includes-section {
   margin-bottom: 2rem;
+  flex-grow: 1;
 }
 .pricing-card .includes-section .includes-label {
   font-size: 0.875rem;
@@ -739,6 +743,7 @@ nav {
 .pricing-card .button {
   width: 100%;
   color: white;
+  margin-top: auto;
 }
 
 @media (min-width: 768px) {
