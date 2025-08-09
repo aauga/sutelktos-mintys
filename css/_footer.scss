@@ -1,0 +1,120 @@
+@use 'variables' as *;
+
+footer {
+    margin: $spacing-xl 0;
+
+    .footer-content {
+        display: grid;
+        gap: $spacing-lg;
+        text-align: center;
+
+        img {
+            height: 5rem;
+            width: auto;
+            margin: 0 auto;
+        }
+
+        h4 {
+            font-size: $font-size-md;
+            font-weight: 600;
+            margin-bottom: $spacing-sm;
+            color: $primary-color;
+        }
+
+        .footer-contact {
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: $spacing-sm;
+
+                img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-right: $spacing-xs;
+                    color: $accent-color;
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: $spacing-xs;
+                }
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-sm;
+        }
+
+        .footer-contact,
+        .footer-links {
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                font-size: $font-size-sm;
+                transition: color $delay-md ease;
+
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+
+        .footer-social {
+            .social-links {
+                display: flex;
+                justify-content: center;
+                gap: $spacing-sm;
+
+                a {
+                    img {
+                        width: 2rem;
+                        height: 2rem;
+                        filter: brightness(0) invert(0.2);
+                        transition: filter $delay-md ease;
+
+                        &:hover {
+                            filter: brightness(0) invert(0.5) sepia(1) saturate(5) hue-rotate(320deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    footer {
+        .footer-content {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            text-align: left;
+            align-items: start;
+            gap: $spacing-xl;
+
+            img {
+                grid-column: span 1;
+            }
+
+            .footer-contact {
+                .contact-info {
+                    align-items: flex-start;
+                }
+            }
+
+            .footer-contact {
+                .contact-info {
+                    align-items: flex-start;
+                }
+            }
+
+            .footer-social {
+                .social-links {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}
