@@ -17,7 +17,7 @@
 
         p {
             font-size: $font-size-md;
-            color: color-mix(in srgb, black 50%, white);
+            color: $gray-color;
         }
     }
 }
@@ -79,6 +79,11 @@
             font-size: $font-size-md;
             color: $primary-color;
         }
+
+        .discount {
+            font-size: $font-size-sm;
+            color: $gray-color;
+        }
     }
 
     hr {
@@ -94,7 +99,7 @@
 
         .includes-label {
             font-size: $font-size-sm;
-            color: #666;
+            color: $gray-color;
             margin-bottom: $spacing-md;
             font-weight: 600;
             text-transform: uppercase;

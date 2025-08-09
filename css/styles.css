@@ -446,7 +446,7 @@ nav {
 }
 .offerings .heading p {
   font-size: 1rem;
-  color: color-mix(in srgb, black 50%, white);
+  color: #808080;
 }
 .offerings .grid {
   display: grid;
@@ -613,7 +613,7 @@ nav {
 }
 .teachers p {
   font-size: 1rem;
-  color: color-mix(in srgb, black 60%, white);
+  color: #808080;
 }
 .teachers img {
   width: 100%;
@@ -662,7 +662,7 @@ nav {
 }
 .pricing .heading p {
   font-size: 1rem;
-  color: color-mix(in srgb, black 50%, white);
+  color: #808080;
 }
 
 .pricing-grid {
@@ -714,6 +714,10 @@ nav {
   font-size: 1rem;
   color: #012924;
 }
+.pricing-card .price-container .discount {
+  font-size: 0.875rem;
+  color: #808080;
+}
 .pricing-card hr {
   border: none;
   height: 1px;
@@ -726,7 +730,7 @@ nav {
 }
 .pricing-card .includes-section .includes-label {
   font-size: 0.875rem;
-  color: #666;
+  color: #808080;
   margin-bottom: 1rem;
   font-weight: 600;
   text-transform: uppercase;

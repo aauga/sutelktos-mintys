@@ -48,7 +48,7 @@ $pastel-brown: #836953;
 
     p {
         font-size: $font-size-md;
-        color: color-mix(in srgb, black 60%, white);
+        color: $gray-color;
     }
 
     img {
