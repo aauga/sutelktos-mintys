@@ -853,6 +853,13 @@ nav {
     gap: 2rem;
   }
 }
+.contact {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+.contact.in-view {
+  opacity: 1;
+}
 .contact div {
   background-color: #012924;
   padding: 2rem;

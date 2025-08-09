@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     entry.target.classList.add('in-view');
                     observer.unobserve(entry.target);
                     return; // Skip the setTimeout logic for lesson-includes
+                } else if (entry.target.classList.contains('contact')) {
+                    // Handle contact section - add 'in-view' class immediately
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                    return; // Skip the setTimeout logic for contact
                 }
                 
                 setTimeout(() => {
@@ -63,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements that should animate on scroll
-    const animatedElements = document.querySelectorAll('.offerings .heading, .offering, .offering .icon, .teachers .heading, .teachers img, .pricing, .lesson-includes');
+    const animatedElements = document.querySelectorAll('.offerings .heading, .offering, .offering .icon, .teachers .heading, .teachers img, .pricing, .lesson-includes, .contact');
     animatedElements.forEach(el => {
         observer.observe(el);
     });
