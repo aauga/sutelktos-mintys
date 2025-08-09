@@ -659,16 +659,35 @@ nav {
 .pricing .heading h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.05s, transform 0.4s ease-out 0.05s;
 }
 .pricing .heading p {
   font-size: 1rem;
   color: #808080;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.1s, transform 0.4s ease-out 0.1s;
+}
+.pricing.in-view .heading h2,
+.pricing.in-view .heading p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .pricing-grid {
   display: grid;
   gap: 1rem;
   width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.15s, transform 0.4s ease-out 0.15s;
+}
+
+.pricing.in-view .pricing-grid {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .pricing-card {
@@ -679,6 +698,21 @@ nav {
   flex-direction: column;
   height: 100%;
   position: relative;
+}
+.pricing-card:nth-child(1) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.25s, transform 0.4s ease-out 0.25s;
+}
+.pricing-card:nth-child(2) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.35s, transform 0.4s ease-out 0.35s;
+}
+.pricing-card:nth-child(3) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.45s, transform 0.4s ease-out 0.45s;
 }
 .pricing-card.best-offer {
   border: 2px solid #4CAF50;
@@ -747,12 +781,43 @@ nav {
   font-size: 0.875rem;
   color: #808080;
   margin: 1rem 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.55s, transform 0.4s ease-out 0.55s;
+}
+
+.pricing.in-view .pricing-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pricing.in-view .pricing-card.best-offer {
+  transform: scale(1.02);
+}
+
+.pricing.in-view .disclaimer {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .lesson-includes {
   display: grid;
   gap: 1rem;
   width: 100%;
+}
+.lesson-includes > div:nth-child(1) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.1s, transform 0.4s ease-out 0.1s;
+}
+.lesson-includes > div:nth-child(2) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.2s, transform 0.4s ease-out 0.2s;
+}
+.lesson-includes > div:nth-child(3) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-out 0.3s, transform 0.4s ease-out 0.3s;
 }
 .lesson-includes h3 {
   font-size: 1rem;
@@ -766,6 +831,11 @@ nav {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
+}
+
+.lesson-includes.in-view > div {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (min-width: 768px) {

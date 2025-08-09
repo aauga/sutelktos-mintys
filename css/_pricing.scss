@@ -1,5 +1,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
+@use 'animations' as *;
 
 .pricing {
     @include flex-center;
@@ -13,11 +14,26 @@
         h2 {
             font-size: $font-size-xl;
             margin-bottom: $spacing-sm;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.4s ease-out 0.05s, transform 0.4s ease-out 0.05s;
         }
 
         p {
             font-size: $font-size-md;
             color: $gray-color;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.4s ease-out 0.1s, transform 0.4s ease-out 0.1s;
+        }
+    }
+
+    // When section is in view, trigger animations
+    &.in-view {
+        .heading h2,
+        .heading p {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 }
@@ -26,6 +42,14 @@
     display: grid;
     gap: $spacing-md;
     width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease-out 0.15s, transform 0.4s ease-out 0.15s;
+}
+
+.pricing.in-view .pricing-grid {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .pricing-card {
@@ -36,6 +60,24 @@
     flex-direction: column;
     height: 100%;
     position: relative;
+
+    &:nth-child(1) {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.4s ease-out 0.25s, transform 0.4s ease-out 0.25s;
+    }
+
+    &:nth-child(2) {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.4s ease-out 0.35s, transform 0.4s ease-out 0.35s;
+    }
+
+    &:nth-child(3) {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.4s ease-out 0.45s, transform 0.4s ease-out 0.45s;
+    }
 
     &.best-offer {
         border: 2px solid $green-color;
@@ -118,12 +160,47 @@
     font-size: $font-size-sm;
     color: $gray-color;
     margin: $spacing-md 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease-out 0.55s, transform 0.4s ease-out 0.55s;
+}
+
+.pricing.in-view .pricing-card {
+    opacity: 1;
+    transform: translateY(0);
+    
+    &.best-offer {
+        transform: scale(1.02);
+    }
+}
+
+.pricing.in-view .disclaimer {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .lesson-includes {
     display: grid;
     gap: $spacing-md;
     width: 100%;
+
+    > div:nth-child(1) {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.4s ease-out 0.1s, transform 0.4s ease-out 0.1s;
+    }
+
+    > div:nth-child(2) {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.4s ease-out 0.2s, transform 0.4s ease-out 0.2s;
+    }
+
+    > div:nth-child(3) {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.4s ease-out 0.3s, transform 0.4s ease-out 0.3s;
+    }
 
     h3 {
         font-size: $font-size-md;
@@ -139,6 +216,11 @@
         letter-spacing: 0.5px;
         margin-bottom: $spacing-md;
     }
+}
+
+.lesson-includes.in-view > div {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (min-width: $breakpoint-md) {

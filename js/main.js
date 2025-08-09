@@ -41,6 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     delay = 800; // Icons animate after their parent offering
                 } else if (entry.target.closest('.teachers') && entry.target.tagName === 'IMG') {
                     delay = 300; // Image animates 300ms after the heading
+                } else if (entry.target.classList.contains('pricing')) {
+                    // Handle pricing section - add 'in-view' class immediately
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                    return; // Skip the setTimeout logic for pricing
+                } else if (entry.target.classList.contains('lesson-includes')) {
+                    // Handle lesson includes section - add 'in-view' class immediately
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                    return; // Skip the setTimeout logic for lesson-includes
                 }
                 
                 setTimeout(() => {
@@ -53,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements that should animate on scroll
-    const animatedElements = document.querySelectorAll('.offerings .heading, .offering, .offering .icon, .teachers .heading, .teachers img');
+    const animatedElements = document.querySelectorAll('.offerings .heading, .offering, .offering .icon, .teachers .heading, .teachers img, .pricing, .lesson-includes');
     animatedElements.forEach(el => {
         observer.observe(el);
     });
