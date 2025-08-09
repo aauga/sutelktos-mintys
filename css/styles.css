@@ -680,7 +680,7 @@ nav {
   position: relative;
 }
 .pricing-card.best-offer {
-  border: 2px solid #ff9da0;
+  border: 2px solid #4CAF50;
   transform: scale(1.02);
 }
 .pricing-card .best-offer-badge {
@@ -688,7 +688,7 @@ nav {
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ff9da0;
+  background: #4CAF50;
   padding: 0.25rem 1rem;
   border-radius: 0.5rem;
   font-size: 0.875rem;
@@ -705,18 +705,18 @@ nav {
   margin-bottom: 2rem;
   line-height: 1.5;
 }
+.pricing-card .price-container {
+  color: #2E4A3D;
+}
 .pricing-card .price-container .price {
   font-size: 3rem;
   font-weight: 700;
-  color: #012924;
 }
 .pricing-card .price-container span:last-child {
   font-size: 1rem;
-  color: #012924;
 }
 .pricing-card .price-container .discount {
   font-size: 0.875rem;
-  color: #808080;
 }
 .pricing-card hr {
   border: none;
@@ -729,12 +729,12 @@ nav {
   flex-grow: 1;
 }
 .pricing-card .includes-section .includes-label {
+  font-weight: 600;
   font-size: 0.875rem;
   color: #808080;
-  margin-bottom: 1rem;
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin-bottom: 1rem;
 }
 .pricing-card .includes-section .includes-list {
   list-style: none;
@@ -766,6 +766,12 @@ nav {
   width: 100%;
   color: white;
   margin-top: auto;
+}
+
+.disclaimer {
+  font-size: 0.875rem;
+  color: #808080;
+  margin: 1rem 0;
 }
 
 @media (min-width: 768px) {

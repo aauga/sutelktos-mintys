@@ -37,7 +37,7 @@
     position: relative;
 
     &.best-offer {
-        border: 2px solid $accent-color;
+        border: 2px solid $green-color;
         transform: scale(1.02);
     }
 
@@ -47,7 +47,7 @@
         left: 50%;
         transform: translateX(-50%);
 
-        background: $accent-color;
+        background: $green-color;
         padding: $spacing-xs $spacing-md;
         border-radius: $border-radius-md;
 
@@ -69,20 +69,19 @@
     }
 
     .price-container {
+        color: $secondary-color;
+
         .price {
             font-size: $font-size-xxl;
             font-weight: 700;
-            color: $primary-color;
         }
 
         span:last-child {
             font-size: $font-size-md;
-            color: $primary-color;
         }
 
         .discount {
             font-size: $font-size-sm;
-            color: $gray-color;
         }
     }
 
@@ -98,12 +97,12 @@
         flex-grow: 1;
 
         .includes-label {
+            font-weight: 600;
             font-size: $font-size-sm;
             color: $gray-color;
-            margin-bottom: $spacing-md;
-            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin-bottom: $spacing-md;
         }
 
         .includes-list {
@@ -125,7 +124,7 @@
                     position: absolute;
                     left: 0;
                     top: 0;
-                    color: #4CAF50;
+                    color: $green-color;
                     font-weight: bold;
                     font-size: $font-size-md;
                 }
@@ -142,6 +141,12 @@
         color: white;
         margin-top: auto;
     }
+}
+
+.disclaimer {
+    font-size: $font-size-sm;
+    color: $gray-color;
+    margin: $spacing-md 0;
 }
 
 @media (min-width: $breakpoint-md) {
