@@ -121,12 +121,9 @@
 }
 
 .lesson-includes {
+    display: grid;
+    gap: $spacing-md;
     width: 100%;
-
-    .includes-grid {
-        display: grid;
-        gap: $spacing-md;
-    }
 
     h3 {
         font-size: $font-size-md;
@@ -159,9 +156,7 @@
     }
 
     .lesson-includes {
-        .includes-grid {
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: $spacing-lg;
-        }
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $spacing-lg;
     }
 }

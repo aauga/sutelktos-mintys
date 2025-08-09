@@ -750,11 +750,9 @@ nav {
 }
 
 .lesson-includes {
-  width: 100%;
-}
-.lesson-includes .includes-grid {
   display: grid;
   gap: 1rem;
+  width: 100%;
 }
 .lesson-includes h3 {
   font-size: 1rem;
@@ -780,7 +778,7 @@ nav {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }
-  .lesson-includes .includes-grid {
+  .lesson-includes {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }
