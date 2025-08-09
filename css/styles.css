@@ -736,32 +736,6 @@ nav {
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
 }
-.pricing-card .includes-section .includes-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-.pricing-card .includes-section .includes-list li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 0.5rem;
-  color: #012924;
-  font-size: 0.875rem;
-  line-height: 1.4;
-}
-.pricing-card .includes-section .includes-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #4CAF50;
-  font-weight: bold;
-  font-size: 1rem;
-}
-.pricing-card .includes-section .includes-list li:last-child {
-  margin-bottom: 0;
-}
 .pricing-card .button {
   width: 100%;
   color: white;
@@ -798,6 +772,27 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   color: #012924;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.list li::before {
+  content: "✓";
+  text-align: center;
+  color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.2);
+  border-radius: 50%;
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  line-height: 1.25em;
+  margin-right: 8px;
+}
+.list li:last-child {
+  margin-bottom: 0;
 }
 
 @media print {
