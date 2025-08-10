@@ -7,9 +7,7 @@
     @include flex-center;
     @include gap($spacing-lg);
     text-align: center;
-
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-bottom: 4rem;
 
     h1 {
         line-height: 1.2;
@@ -79,6 +77,8 @@
 
 @media (min-width: $breakpoint-md) {
     .hero-text {
+        padding-bottom: 6rem;
+
         h1 {
             font-size: 3.25rem;
         }

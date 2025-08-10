@@ -42,10 +42,18 @@
 }
 
 section.padding-top {
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 section.padding-bottom {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  section.padding-top {
+    padding-top: 4rem;
+  }
+  section.padding-bottom {
+    padding-bottom: 4rem;
+  }
 }
 
 @keyframes fadeInUp {
@@ -316,8 +324,7 @@ nav {
   display: flex;
   gap: 2rem;
   text-align: center;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
 }
 .hero-text h1 {
   line-height: 1.2;
@@ -383,6 +390,9 @@ nav {
   }
 }
 @media (min-width: 768px) {
+  .hero-text {
+    padding-bottom: 6rem;
+  }
   .hero-text h1 {
     font-size: 3.25rem;
   }
@@ -878,7 +888,7 @@ nav {
   }
 }
 footer {
-  margin: 4rem 0;
+  margin: 2rem 0;
 }
 footer .footer-content {
   display: grid;
@@ -945,6 +955,9 @@ footer .footer-content .footer-social .social-links a img:hover {
 }
 
 @media (min-width: 768px) {
+  footer {
+    margin: 4rem 0;
+  }
   footer .footer-content {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: left;

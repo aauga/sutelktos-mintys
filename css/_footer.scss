@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 footer {
-    margin: $spacing-xl 0;
+    margin: $spacing-lg 0;
 
     .footer-content {
         display: grid;
@@ -88,6 +88,8 @@ footer {
 
 @media (min-width: $breakpoint-md) {
     footer {
+        margin: $spacing-xl 0;
+
         .footer-content {
             grid-template-columns: 1fr 1fr 1fr 1fr;
             text-align: left;

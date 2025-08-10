@@ -23,10 +23,20 @@
 
 section {
     &.padding-top {
-        padding-top: $spacing-xl;
+        padding-top: $spacing-lg;
     }
 
     &.padding-bottom {
-        padding-bottom: $spacing-xl;
+        padding-bottom: $spacing-lg;
+    }
+    
+    @media (min-width: $breakpoint-md) {
+        &.padding-top {
+            padding-top: $spacing-xl;
+        }
+
+        &.padding-bottom {
+            padding-bottom: $spacing-xl;
+        }
     }
 }
