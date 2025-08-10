@@ -273,6 +273,8 @@ nav {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 0.25rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .language-switcher .lang-link span {
   display: none;
@@ -302,6 +304,8 @@ nav {
   height: 1.5rem;
   border-radius: 0.25rem;
   flex-shrink: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .language-switcher-mobile .lang-link span {
   font-size: 0.875rem;

@@ -142,6 +142,7 @@ nav {
             width: 1.5rem;
             height: 1.5rem;
             border-radius: $border-radius-sm;
+            object-fit: contain;
         }
         
         span {
@@ -175,6 +176,7 @@ nav {
             height: 1.5rem;
             border-radius: $border-radius-sm;
             flex-shrink: 0;
+            object-fit: contain;
         }
         
         span {
