@@ -96,6 +96,11 @@
 
         p {
             color: color-mix(in srgb, $pastel-yellow 50%, black);
+            margin-bottom: $spacing-md;
+        }
+
+        a {
+            transition: all 0.3s ease;
         }
 
         .icon {
@@ -126,11 +131,6 @@
         text-align: justify;
         font-size: $font-size-md;
         transition: color 0.3s ease;
-    }
-
-    button {
-        margin-top: $spacing-md;
-        transition: all 0.3s ease;
     }
 }
 
