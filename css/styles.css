@@ -669,6 +669,7 @@ nav {
 .teachers p {
   font-size: 1rem;
   color: #808080;
+  text-align: justify;
 }
 .teachers img {
   width: 100%;
