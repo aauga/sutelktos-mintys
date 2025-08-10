@@ -126,6 +126,65 @@ nav {
     }
 }
 
+// Language Switcher
+.language-switcher {
+    .lang-link {
+        @include flex-center;
+        gap: $spacing-xs;
+        padding: $spacing-xs $spacing-sm;
+        border-radius: $border-radius-sm;
+        
+        &:hover {
+            background-color: var(--nav-hover-bg);
+        }
+        
+        .flag-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: $border-radius-sm;
+        }
+        
+        span {
+            display: none;
+        }
+    }
+}
+
+.language-switcher-mobile {
+    margin-top: $spacing-sm;
+    padding-top: $spacing-sm;
+    border-top: 1px solid var(--nav-border-color);
+    
+    .lang-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: $spacing-xs;
+        padding: $spacing-sm;
+        text-decoration: none;
+        color: var(--nav-link-color);
+        transition: var(--nav-transition);
+        border-radius: $border-radius-sm;
+        
+        &:hover {
+            background-color: var(--nav-hover-bg);
+        }
+        
+        .flag-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: $border-radius-sm;
+            flex-shrink: 0;
+        }
+        
+        span {
+            font-size: $font-size-sm;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    }
+}
+
 .mobile-menu {
     @include slide-down;
 
@@ -154,7 +213,7 @@ nav {
         a {
             @include nav-link;
 
-            display: block;
+            display: flex;
             padding: $spacing-sm;
             margin-bottom: $spacing-sm;
             border-radius: $border-radius-sm;
