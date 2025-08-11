@@ -91,16 +91,10 @@
     }
 
     &.third {
-        order: 4;
         background-color: color-mix(in srgb, $pastel-yellow 60%, white);
 
         p {
             color: color-mix(in srgb, $pastel-yellow 50%, black);
-            margin-bottom: $spacing-md;
-        }
-
-        a {
-            transition: all 0.3s ease;
         }
 
         .icon {
@@ -113,6 +107,11 @@
 
         p {
             color: color-mix(in srgb, $pastel-red 50%, black);
+            margin-bottom: $spacing-md;
+        }
+
+        a {
+            transition: all 0.3s ease;
         }
 
         .icon {
@@ -158,7 +157,6 @@
     }
 
     .fourth {
-        order: 4;
         grid-column: 2 / 3;
     }
 }
@@ -169,18 +167,18 @@
     }
 
     .first {
-        grid-column: 1 / 3;
-    }
-
-    .second {
-        grid-column: 3 / 6;
-    }
-
-    .third {
         grid-column: 1 / 4;
     }
 
-    .fourth {
+    .second {
         grid-column: 4 / 6;
+    }
+
+    .third {
+        grid-column: 1 / 3;
+    }
+
+    .fourth {
+        grid-column: 3 / 6;
     }
 }
