@@ -43,6 +43,8 @@
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out, all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 
     &.animate-in {
         opacity: 1;
@@ -112,6 +114,8 @@
 
         a {
             transition: all 0.3s ease;
+            margin-top: auto;
+            align-self: flex-start;
         }
 
         .icon {
