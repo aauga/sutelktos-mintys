@@ -72,4 +72,41 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedElements.forEach(el => {
         observer.observe(el);
     });
+
+    // Popup
+    const popupOverlay = document.getElementById('popup-overlay');
+    const popupClose = document.getElementById('popup-close');
+
+    if (popupOverlay && popupClose) {
+        function openPopup() {
+            popupOverlay.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                popupOverlay.classList.add('visible');
+            });
+        }
+
+        function closePopup() {
+            popupOverlay.classList.remove('visible');
+            popupOverlay.addEventListener('transitionend', function handler() {
+                popupOverlay.classList.add('hidden');
+                popupOverlay.removeEventListener('transitionend', handler);
+            });
+        }
+
+        setTimeout(openPopup, 500);
+
+        popupClose.addEventListener('click', closePopup);
+
+        popupOverlay.addEventListener('click', function(e) {
+            if (e.target === popupOverlay) {
+                closePopup();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !popupOverlay.classList.contains('hidden')) {
+                closePopup();
+            }
+        });
+    }
 });
